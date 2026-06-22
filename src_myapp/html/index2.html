@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>登録完了</title>
+  <link rel="stylesheet" href="../resource/css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="message">登録しました</div>
+    <button class="back-btn" onclick="history.back()">戻る</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(location.search);
+      const word = params.get('word') || '';
+      const messageEl = document.querySelector('.message');
+      if (messageEl) {
+        if (word) {
+          messageEl.textContent = `「${word}」を登録しました`;
+        } else {
+          messageEl.textContent = '登録しました';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
