@@ -3,15 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>サンプル</title>
-  <link rel="stylesheet" href="resource/css/styles.css">
+  <link rel="stylesheet" href="resource/css/styles_index.css">
 </head>
+
 <body>
   <div class="container">
-    <div class="input-box">
+
+    <div class="form-row">
+      <label class="label">分類：</label>
+
+      <label class="radio-label">
+        <input type="radio" name="category" value="kanji" checked>
+        漢字
+      </label>
+
+      <label class="radio-label">
+        <input type="radio" name="category" value="word">
+        単語
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label class="label" for="inputText">漢字/単語：</label>
       <input type="text" id="inputText">
     </div>
-    <button onclick="send()">送信</button>
-    <p id="result"></p>
+
+    <div class="form-row">
+      <label class="label" for="reading">読み：</label>
+      <input type="text" id="reading">
+    </div>
+
+    <div class="form-row">
+      <label class="label" for="meaning">意味：</label>
+      <input type="text" id="meaning">
+    </div>
+
+    <div class="button-area">
+      <button type="button">クリア</button>
+      <button type="button" onclick="send()">登録</button>
+    </div>
+
   </div>
 
   <script src="resource/js/script.js"></script>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 650px;
+}
+
+/* 1行分 */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+/* 左側ラベル */
+.label {
+    width: 140px;
+    text-align: right;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+/* テキストボックス */
+input[type="text"] {
+    width: 300px;
+    height: 38px;
+    padding: 6px 10px;
+    font-size: 18px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+/* ラジオボタン */
+.radio-label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 12px;
+    transform: scale(1.6);
+}
+
+/* ボタンエリア */
+.button-area {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+    width: 465px;
+    margin-left: 165px;
+}
+
+/* ボタン */
+button {
+    min-width: 86px;
+    height: 38px;
+    border: 1px solid #274b8f;
+    border-radius: 6px;
+    background-color: #3f6db7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f5ca5;
+}
