@@ -39,10 +39,37 @@
     </div>
 
     <div class="button-area">
-      <button type="button">クリア</button>
+      <button type="button" onclick="clearForm()">クリア</button>
       <button type="button" onclick="send()">登録</button>
     </div>
 
+  </div>
+
+  <div id="confirmDialog" class="modal hidden">
+    <div class="modal-backdrop" onclick="closeConfirmDialog()"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <h2 id="confirmTitle">登録内容の確認</h2>
+      <div class="confirm-row">
+        <span class="confirm-label">分類：</span>
+        <span id="confirmCategory"></span>
+      </div>
+      <div class="confirm-row">
+        <span class="confirm-label">漢字/単語：</span>
+        <span id="confirmText"></span>
+      </div>
+      <div class="confirm-row">
+        <span class="confirm-label">読み：</span>
+        <span id="confirmReading"></span>
+      </div>
+      <div class="confirm-row">
+        <span class="confirm-label">意味：</span>
+        <span id="confirmMeaning"></span>
+      </div>
+      <div class="confirm-button-area">
+        <button type="button" onclick="closeConfirmDialog()">キャンセル</button>
+        <button type="button" onclick="executeAction()">実行</button>
+      </div>
+    </div>
   </div>
 
   <script src="resource/js/script.js"></script>
